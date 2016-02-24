@@ -1,0 +1,14 @@
+<div id="wrapper">
+	<div id="header"><h1><center>Liste des TINTIN</center></h1></div>
+	<div id="leftcolumn"></div>
+	<div id="content">
+<%= paginate @articles %>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li><a href="/articles/<%= article.id %>"><%= article.title %></a></li>
+  <% end %>
+</ul>
+</div>
+	<div id="rightcolumn"></div>
+</div>
